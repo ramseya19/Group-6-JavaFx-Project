@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="vehicleregistration.FXMLDocumentController"
+            prefWidth="650" prefHeight="450">
+
+    <children>
+        <VBox spacing="20"
+              AnchorPane.topAnchor="20"
+              AnchorPane.leftAnchor="20"
+              AnchorPane.rightAnchor="20"
+              AnchorPane.bottomAnchor="20">
+
+            <!-- Title -->
+            <Label text="Vehicle Registration System"
+                   style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+
+            <!-- Form -->
+            <GridPane hgap="12" vgap="12">
+                <columnConstraints>
+                    <ColumnConstraints minWidth="160" />
+                    <ColumnConstraints minWidth="350" />
+                </columnConstraints>
+
+                <!-- Owner -->
+                <Label text="Owner Name:"
+                       GridPane.rowIndex="0"
+                       GridPane.columnIndex="0"/>
+                <TextField fx:id="txtOwner"
+                           GridPane.rowIndex="0"
+                           GridPane.columnIndex="1"
+                           editable="true"
+                           disable="false"/>
+
+                <!-- Vehicle -->
+                <Label text="Vehicle Name:"
+                       GridPane.rowIndex="1"
+                       GridPane.columnIndex="0"/>
+                <TextField fx:id="txtVehicle"
+                           GridPane.rowIndex="1"
+                           GridPane.columnIndex="1"
+                           editable="true"
+                           disable="false"/>
+
+                <!-- License -->
+                <Label text="License Number:"
+                       GridPane.rowIndex="2"
+                       GridPane.columnIndex="0"/>
+                <TextField fx:id="txtLicense"
+                           GridPane.rowIndex="2"
+                           GridPane.columnIndex="1"
+                           editable="true"
+                           disable="false"/>
+
+                <!-- Plate -->
+                <Label text="Plate Number:"
+                       GridPane.rowIndex="3"
+                       GridPane.columnIndex="0"/>
+                <TextField fx:id="txtPlate"
+                           GridPane.rowIndex="3"
+                           GridPane.columnIndex="1"
+                           editable="true"
+                           disable="false"/>
+            </GridPane>
+
+            <!-- Buttons -->
+            <HBox spacing="15">
+                <Button text="Register Vehicle"
+                        onAction="#handleRegister"
+                        style="-fx-background-color:#2ecc71; -fx-text-fill:white;" />
+
+                <Button text="Clear"
+                        onAction="#handleClear" />
+
+                <Button text="Exit"
+                        onAction="#handleExit"
+                        style="-fx-background-color:#e74c3c; -fx-text-fill:white;" />
+            </HBox>
+
+            <!-- Output -->
+            <TextArea fx:id="txtOutput"
+                      prefHeight="160"
+                      editable="false"
+                      wrapText="true"/>
+        </VBox>
+    </children>
+</AnchorPane>
